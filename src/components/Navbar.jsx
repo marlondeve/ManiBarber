@@ -5,11 +5,11 @@ import { TailcastLogo } from "../assets/logos/TailcastLogo";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
-  { label: "Home", href: "#home", ariaLabel: "Home" },
-  { label: "Features", href: "#features", ariaLabel: "Features" },
-  { label: "Pricing", href: "#pricing", ariaLabel: "Pricing" },
-  { label: "Feedback", href: "#feedback", ariaLabel: "Feedback" },
-  { label: "FAQ", href: "#FAQ", ariaLabel: "FAQ" },
+  { label: "Inicio", href: "#home", ariaLabel: "Home" },
+  { label: "Atajos", href: "#features", ariaLabel: "Features" },
+  { label: "Precios", href: "#pricing", ariaLabel: "Pricing" },
+  { label: "Comentarios", href: "#feedback", ariaLabel: "Feedback" },
+  { label: "Preguntas frecuentes", href: "#FAQ", ariaLabel: "FAQ" },
 ];
 
 export const Navbar = () => {
@@ -30,7 +30,7 @@ export const Navbar = () => {
                 <TailcastLogo />
               </div>
               <div className="text-white font-['Inter'] font-bold text-xl">
-                Tailcast
+                Mani
               </div>
             </div>
           </a>
@@ -69,7 +69,7 @@ export const Navbar = () => {
               aria-label="source code"
             >
               <GithubIcon />
-              <span className="pt-px">Source code</span>
+              <span className="pt-px">WhatsApp</span>
             </a>
           </div>
         </motion.div>

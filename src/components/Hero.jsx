@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.jpg";
 
@@ -50,20 +49,118 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
-            <div
-              className="custom-button-colored w-64 sm:w-52 h-12 mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0"
-              onClick={() => setIsModalOpen(true)}
+          <form class=" flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+            <select
+              id="countries"
+              class="ps-2 w-full h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
             >
-              Get Started
-            </div>
-            <div
-              className="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
-              onClick={() => setIsModalOpen(true)}
+              <option value="CO" selected>
+                Solo Corte
+              </option>
+              <option value="US">Solo Barba</option>
+              <option value="CA">Corte y Barba</option>
+              <option value="FR">Corte y Ceja</option>
+              <option value="DE">Corte, Barba y Ceja</option>
+            </select>
+            <label
+              for="countries"
+              class="peer-focus:font-medium  text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Live demo
+              Tipo de servicio
+            </label>
+
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="name"
+                name="floating_password"
+                id="floating_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_password"
+                class="peer-focus:font-medium  text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                Nombre
+              </label>
             </div>
-          </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="number"
+                name="repeat_password"
+                id="floating_repeat_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_repeat_password"
+                class="peer-focus:font-medium  text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                Número
+              </label>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <div class="relative max-w-sm">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                    </svg>
+                  </div>
+                  <input
+                    datepicker
+                    type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Select date"
+                  />
+                </div>
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium  text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Día
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <select
+                  id="floating_last_name"
+                  class="ps-2 w-full h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
+                >
+                  <option value="8A" selected>
+                    8:00 AM
+                  </option>
+                  <option value="US">9:30 AM</option>
+                  <option value="CA">11:00 AM</option>
+                  <option value="FR">2:00 PM</option>
+                  <option value="DE">3:30 PM</option>
+                  <option value="DE">5:00 PM</option>
+                  <option value="DE">6:30 PM</option>
+                </select>
+                <label
+                  for="floating_last_name"
+                  class="peer-focus:font-medium  text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Hora
+                </label>
+              </div>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <button
+                type="submit"
+                class="w-64 sm:w-52 h-12 rounded-xl font-bold text-white border border-solid  flex justify-center items-center cursor-pointer bg-customDarkBg2 hover:bg-customDarkBg3 border-customPrimary transition"
+              >
+                Agendar
+              </button>
+            </div>
+          </form>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
