@@ -6,12 +6,6 @@ import { TailcastLogo } from "../assets/logos/TailcastLogo";
 
 export const InvitationModal = ({ setIsOpen }) => (
   <AnimatePresence>
-    <motion.div
-      initial={{ opacity: 0, zIndex: 50 }}
-      animate={{ opacity: 1, zIndex: 50 }}
-      transition={{ duration: 0.1 }}
-      exit={{ opacity: 0 }}
-    >
       <div
         className="w-full h-full  bg-customDarkBgTransparentDarker fixed top-0 left-0 flex  z-50 justify-center items-center"
         onClick={() => setIsOpen(false)}
@@ -85,6 +79,5 @@ export const InvitationModal = ({ setIsOpen }) => (
           </div>
         </div>
       </div>
-    </motion.div>
   </AnimatePresence>
 );

@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Hero } from "../components/Hero.jsx";
-import { Navbar } from "../components/Navbar.jsx";
-import { Features1 } from "../components/Features1.jsx";
-import { Features2 } from "../components/Features2.jsx";
-import { Testimonials } from "../components/Testimonials.jsx";
-import { FeaturesDiagonal } from "../components/FeaturesDiagonal.jsx";
-import { Pricing } from "../components/Pricing.jsx";
-import { FAQ } from "../components/FAQ.jsx";
-import { Brands } from "../components/Brands.jsx";
+import { Hero } from "../components/Hero";
+import { Navbar } from "../components/Navbar";
+import { Features1 } from "../components/Features1";
+import { Features2 } from "../components/Features2";
+import { Testimonials } from "../components/Testimonials";
+import { FeaturesDiagonal } from "../components/FeaturesDiagonal";
+import { Pricing } from "../components/Pricing";
+import { FAQ } from "../components/FAQ";
+import { Brands } from "../components/Brands";
 import { Divider } from "../components/Divider";
-import { Footer } from "../components/Footer.jsx";
+import { Footer } from "../components/Footer";
 import { ScrollUpButton } from "../components/ScrollUpButton";
 import "../styles/Theme.css";
 import "../styles/Diagonals.css";
@@ -20,10 +20,10 @@ import "../styles/Diagonals.css";
 <Layout title="Mani">
   <Navbar client:load />
   <Hero client:load />
+  <Pricing client:load />
   <Features1 client:load />
   <Divider />
   <Testimonials client:load />
-  <Pricing client:load />
   <FAQ client:load />
   <Footer />
   <ScrollUpButton client:load />
