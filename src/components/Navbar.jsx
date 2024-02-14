@@ -114,7 +114,7 @@ export const Navbar = () => {
                 target="_blank"
               >
                 <GithubIcon />
-                Source code
+                WhatsApp
               </a>
             </div>
           </motion.div>
